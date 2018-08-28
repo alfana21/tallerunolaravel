@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pagina1', function () {
+    return view('pagina1',[
+
+        'name' => 'Ricardo Riascos',
+        'tel' => '3127488284',
+        'email' => 'alf21r@gmail.com',
+    ]);
+});
+
+Route::get('/pagina2/{No}', function ($No) {
+    return view('pagina2')->with('No',$No);
+});
